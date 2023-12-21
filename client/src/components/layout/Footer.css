@@ -1,0 +1,109 @@
+/* Base Styles */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5vw 2vw; /* Use vw for padding to make it more responsive */
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  }
+  
+  .col-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 2vw;
+  }
+  
+  footer .logo {
+    margin-bottom: 2vw;
+  }
+  
+  footer h4 {
+    font-size: 1.5rem; /* Use rem for responsive font sizes */
+    padding-bottom: 2vw;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    margin: 0 0 0.5vw 0; /* Use vw for margin for responsiveness */
+  }
+  
+  footer li {
+    list-style-type: none;
+    padding-bottom: 0.5vw;
+  }
+  
+  footer a {
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 1vw;
+    transition: 0.3s ease;
+    color: #757575;
+  }
+  
+  footer a:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  footer .social-icons {
+    margin-top: 2vw;
+    padding-right: 0.5vw;
+    cursor: pointer;
+  }
+  
+  footer .app-logo img {
+    margin-bottom: 2vw;
+    border: 1px solid #222;
+    border-radius: 6px;
+  }
+  
+  footer .payment-logo img {
+    margin: 1vw 0 1.5vw 0;
+  }
+  
+  footer .copy-right {
+    display: none;
+    margin-top: 2vw;
+    font-size: 1rem;
+    color: #757575;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    footer {
+      padding: 10vw 2vw;
+    }
+  
+    .col-flex {
+      flex: 1 0 100%;
+      margin-right: 0;
+      margin-bottom: 2vw;
+    }
+  
+    .mobile {
+      display: flex;
+    }
+  
+    .mobile i {
+      font-size: 2vw;
+      margin-right: 2vw;
+    }
+  
+    #header {
+      padding: 2vw 3vw;
+    }
+  
+    #banner_1-main {
+      margin: 1vw;
+    }
+  
+    .promo-mess-banner h1 {
+      font-size: 1.5rem;
+    }
+  
+    h1 {
+      line-height: 2.5vw;
+    } 
+  }
+  
