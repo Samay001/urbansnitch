@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+// import contactUs from '../../pages/contact.js'
+
 const logoImage = '/images/logo.png'; 
 const storeImage = '/images/store-icon.avif'; 
 const paymentImage = '/images/payment.png'; 
-
 
 const Footer = () => {
   return (
@@ -33,8 +34,8 @@ const Footer = () => {
         <div className="col-md-3 col-sm-6 col-xs-12 footer-box">
             <h4>About</h4>
             <ul>
-                <li><NavLink to="/" href>About Us</NavLink></li>
-                <li><NavLink to="/" href>Careers</NavLink></li>
+                <li><NavLink to="/Contact" >Contact us</NavLink></li>
+                <li><NavLink to="/About" href>About us</NavLink></li>
                 <li><NavLink to="/" href>Press</NavLink></li>
                 <li><NavLink to="/" href>Blog</NavLink></li>
             </ul>
