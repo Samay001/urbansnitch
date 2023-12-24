@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
     font-family: 'interpid';
-    src: local('Interpid'), url('./IntrepidRegular.ttf') format('opentype');
-}
-  
+    src: local('Interpid'), url('/images/IntrepidRegular.ttf') format('opentype');
+} */
+
 body {
     font-family: 'interpid', sans-serif; 
     letter-spacing: 1px;
@@ -51,6 +51,10 @@ body {
 .nav-link:hover,
 .nav-link.active {
     color: rgb(184, 0, 184); 
+}
+
+.active {
+    border-bottom: 2px solid purple;
 }
 
 /* Responsive styles */

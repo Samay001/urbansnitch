@@ -4,6 +4,7 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        maxLength: 20,
         trim: true
     },
     email:{
@@ -11,9 +12,10 @@ const userSchema = new mongoose.Schema({
         required:true,
         unique:true
     },
-    passward:{
+    password:{
         type:String,
-        required:true
+        required:true,
+        // maxLength: 20
     },
     address:{
         type:String,
