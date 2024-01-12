@@ -38,7 +38,7 @@ export const registerController = async (req, res) => {
         return res.status(201).json({
             success: true,
             message: 'User registration successful',
-            data: user,
+            user,
         });
     } catch (err) {
         console.error(err);
@@ -78,13 +78,14 @@ export const loginController = async (req, res) => {
         }
         //generate token
         const token = await JWT.sign({_id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"});
+
         //send token
         return res.status(200).json({
             success:true,
             message:"Login successful",
             user:{
                 name:user.name,
-                email:user.email
+                email:user.email,
             },
             token
         });

@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"cd client && npm start\""
   },
   "keywords": [],
   "author": "Samay Rathod",
@@ -14,6 +15,8 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",

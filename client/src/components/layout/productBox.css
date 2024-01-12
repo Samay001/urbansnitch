@@ -1,0 +1,55 @@
+/* ProductBox.css */
+
+.container {
+  margin-top: 20px;
+}
+
+.pro-box {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px ;
+  border: 1px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.pro-box:hover {
+  transform: scale(1.02);
+  box-shadow: 20px 20px 30px rgba(171, 166, 166, 0.6);
+}
+
+.pro-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.pro-text {
+  margin-top: 5px;
+}
+
+.pro-text p {
+  padding: 0;
+  text-align: left;
+}
+
+.add-to-cart {
+  margin-top: 10px;
+  display: flex;
+}
+
+.size-btn {
+  display: flex;
+  margin-top: 20px;
+}
+
+.size-btn button, .add-to-cart button{
+  margin-right: 5px;
+  background-color: white;
+  color: #000000;
+}
+
+.size-btn button:hover,.add-to-cart button:hover {
+  background-color: black;
+  color: white;
+}
