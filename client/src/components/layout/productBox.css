@@ -53,3 +53,13 @@
   background-color: black;
   color: white;
 }
+
+.size-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.size.selected {
+  background-color: #000000; 
+  color: #ffffff;
+}
