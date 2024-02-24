@@ -56,7 +56,7 @@ const Cart = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/api/v1/orders",
+        "https://urbansnitch.onrender.com/api/v1/orders",
         body,
         { headers }
       );

@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../../context/cartContext";
 import toast from "react-hot-toast";
-import { set } from "mongoose";
 
 const ProductBox = ({ product }) => {
   const { addItemToCart } = useCart();
