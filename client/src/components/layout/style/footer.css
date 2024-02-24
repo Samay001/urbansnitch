@@ -1,0 +1,97 @@
+h2{
+    font-family: 'msSemiBold-wide', sans-serif;
+    letter-spacing: 1px;
+}
+
+h4{
+    font-family: 'msSemiBold-wide', sans-serif;
+    letter-spacing: 1px;
+}
+
+a{
+    font-family: 'msRegular-wide', sans-serif;
+}
+
+p{
+    font-family: 'msRegular-wide', sans-serif;
+    font-size:small;
+    letter-spacing: 1px;
+}
+
+.btn{
+    font-family: 'msSemiBold-wide', sans-serif;
+}
+
+.footer{
+    background-color: #013A34;
+    color: white;
+    padding: 40px;
+    border-top: 2px solid #FFE9A3;
+}
+.footer a{
+    color: #FFE9A3;
+}
+.footer a:hover{
+    color: white;
+}
+
+.btn{
+    background-color: #ffffff;
+    color: #013A34;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.btn:hover{
+    background-color: #FFE9A3;
+    color: #013A34;
+    text-decoration: none;
+}
+
+.section{
+    padding: 50px;
+}
+
+.section h2{
+    margin-bottom:30px;
+}
+
+.list-unstyled a{
+    text-decoration: none;
+    font-size: large;
+}
+.list-unstyled li{
+    margin-bottom: 10px;
+}
+.list-unstyled li span{
+    margin-right: 10px;
+}
+.col{
+    margin-bottom: 30px;
+}
+
+.link-container a {
+    margin-right: 10px; 
+}
+  
+.custom-border{
+    border-right: 1px solid #FFE9A3;
+}
+
+.link-container a{
+    text-decoration: none;
+    color: #FFE9A3;
+}
+
+.link-container:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.quick-links{
+    margin-top: 50px;
+    /* margin-bottom: 30px; */
+}

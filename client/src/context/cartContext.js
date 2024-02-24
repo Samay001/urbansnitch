@@ -42,7 +42,16 @@ export const CartContextProvider = ({ children }) => {
     setCartItems([]);
   };
 
-//   const cartTotal = (price) ;
+  const updateTotalPrice = (id, price) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === id) {
+        return { ...item, price: item.price + price };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+    console.log(updatedCartItems);
+  };
 
   return (
     <CartContext.Provider
@@ -52,6 +61,7 @@ export const CartContextProvider = ({ children }) => {
         removeItemFromCart,
         clearCart,
         promoCode,
+        updateTotalPrice,
       }}
     >
       {children}

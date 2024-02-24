@@ -1,10 +1,11 @@
 import React,{useState} from "react";
 import Layout from "../../components/layout/layout";
-import './login.css';
+import './style/login.css';
 import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, NavLink } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useAuth } from "../../context/auth";
+import loginImg from "../../assets/images/loginImg.jpg";
 
 const Login = () => {
 
@@ -19,7 +20,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/api/v1/auth/login", {
+      const res = await axios.post("http://localhost:8080/api/v1/auth/login", {
         email,
         password,
       });
@@ -30,10 +31,12 @@ const Login = () => {
           ...auth,
           user: res.data.user,
           token: res.data.token,
+          username: res.data.user.name,
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
         navigate(location.state || "/");
-      } else {
+      } 
+      else {
         toast.error(res.data.message);
       }
     } 
@@ -45,51 +48,42 @@ const Login = () => {
 
   return (
     <Layout>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <div className="card">
-              <div className="card-header">
-                <h2 className="text-center">Login</h2>
+      <div
+        className="login-container"
+        style={{ backgroundImage: `url(${loginImg})` }}
+      >
+          <div className="login-form-container bg-light rounded p-4">
+            <h2 className="text-center mb-4 ">LOGIN</h2>
+            <form className="login-form" onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="form-control"
+                  placeholder="Enter email"
+                  required
+                />
               </div>
-              <div className="card-body">
-                <form onSubmit={handleSubmit} >
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      autofocus
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      id="exampleInputEmail1"
-                      className="form-control"
-                      placeholder="Email"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="form-control"
-                      id="exampleInputPassword1"
-                      placeholder="Enter Your Password"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="submit"
-                      className="btn btn-primary btn-block"
-                      value="Login "
-                    />
-                  </div>
-                </form>
+              <div className="mb-3">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="form-control"
+                  placeholder="Password"
+                  required
+                />
               </div>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+            <div className="text-center mt-3">
+              Didn't have an account<NavLink to="/register">.Signup</NavLink>
             </div>
           </div>
         </div>
-      </div>
     </Layout>
   );
 };

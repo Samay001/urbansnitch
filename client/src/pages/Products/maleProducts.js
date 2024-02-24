@@ -1,15 +1,15 @@
-import image1 from "../../assets/productImages/maleProducts/mP1.webp";
+import image1 from "../../assets/productImages/maleProducts/m6.jpg";
 import image2 from "../../assets/productImages/maleProducts/mP2.jpeg";
-import image3 from "../../assets/productImages/maleProducts/mP3.jpeg";
-import image4 from "../../assets/productImages/maleProducts/mP4.webp";
+import image3 from "../../assets/productImages/maleProducts/m1.jpg";
+import image4 from "../../assets/productImages/maleProducts/m5.jpg";
 import image5 from "../../assets/productImages/maleProducts/mP5.jpeg";
 import image6 from "../../assets/productImages/maleProducts/mP6.jpeg";
-import image7 from "../../assets/productImages/maleProducts/mP7.jpeg";
-import image8 from "../../assets/productImages/maleProducts/mP8.jpeg";
+import image7 from "../../assets/productImages/maleProducts/m2.jpg";
+import image8 from "../../assets/productImages/maleProducts/m7.jpg";
 import image9 from "../../assets/productImages/maleProducts/mP9.jpeg";
-import image10 from "../../assets/productImages/maleProducts/mP10.jpeg";
+import image10 from "../../assets/productImages/maleProducts/m3.jpg";
 import image11 from "../../assets/productImages/maleProducts/mP11.jpeg";
-import image12 from "../../assets/productImages/maleProducts/mP12.jpeg";
+import image12 from "../../assets/productImages/maleProducts/m4.jpg";
 
 const maleProducts =
         [

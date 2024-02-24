@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "msRegular";
+  src: url("../../../assets/fonts/Mona-Sans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "msRegular-wide";
+  src: url("../../../assets/fonts/Mona-Sans-RegularWide.ttf") format("truetype");
+}
+@font-face {
+  font-family: "msBold-wide";
+  src: url("../../../assets/fonts/Mona-Sans-BoldWide.ttf") format("truetype");
+}
+@font-face {
+  font-family: "msSemiBold-wide";
+  src: url("../../../assets/fonts/Mona-Sans-SemiBoldWide.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "msRegular-narrow";
+  src: url("../../../assets/fonts/Mona-Sans-RegularNarrow.ttf")
+    format("truetype");
+}
+
+.navbar {
+  background-color: #013a34;
+  padding: 20px;
+  border-bottom: 2px solid #ffe9a3;
+}
+
+.navbar-brand {
+  font-family: "msBold-wide", sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.navbar-brand:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+}
+
+.item-border {
+  border: 1px solid #ffe9a3;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.nav-link {
+  font-family: "msRegular-wide", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: small;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.badge {
+  padding: 6px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #013a34;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+
+#lblCartCount {
+  font-size: 12px;
+  background: #ffe9a3;
+  color: #013a34;
+  padding: 2px 5px;
+  vertical-align: top;
+  margin-left: -6px;
+  margin-top:10px;
+}

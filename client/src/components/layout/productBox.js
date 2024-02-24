@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./productBox.css";
+import "./style/productBox.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../../context/cartContext";
 
 const ProductBox = ({ product }) => {
   const { addItemToCart } = useCart();
+  const [selectedSize, setSelectedSize] = useState("");
 
   const handleAddToCart = () => {
-    console.log("Adding item to cart:", product);
-    addItemToCart(product);
+    if (selectedSize === "") {
+      alert("Please select a size");
+      return;
+    }
+    addItemToCart({ ...product, size: selectedSize });
   };
 
   return (
-    <div className="container my-4">
+    <div className="container">
       <div className="row">
         <div className="pro-box">
           <div className="pro-img">
@@ -37,25 +41,29 @@ const ProductBox = ({ product }) => {
           </div>
           <div className="size-btn">
             <button
-              className={`btn btn-outline-secondary size `}
+              className={`btn btn-outline-secondary size ${selectedSize === "S" ? "selected" : ""}`}
+              onClick={() => setSelectedSize("S")}
             >
               S
             </button>
 
             <button
-              className={`btn btn-outline-secondary size`}
+              className={`btn btn-outline-secondary size ${selectedSize === "M" ? "selected" : ""}`}
+              onClick={() => setSelectedSize("M")}
             >
               M
             </button>
 
             <button
-              className={`btn btn-outline-secondary size`}
+              className={`btn btn-outline-secondary size ${selectedSize === "L" ? "selected" : ""}`}
+              onClick={() => setSelectedSize("L")}
             >
               L
             </button>
 
             <button
-              className={`btn btn-outline-secondary size `}
+              className={`btn btn-outline-secondary size ${selectedSize === "XL" ? "selected" : ""}`}
+              onClick={() => setSelectedSize("XL")}
             >
               XL
             </button>

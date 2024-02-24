@@ -1,10 +1,10 @@
 import React from "react";
-import './newArrival.css';
+import './style/newArrival.css';
 
 const NewArrival = () => {
   return (
-    <div class="container my-4  bounce">
-      <h1 class="display-4 bouncing-text ">New Arrivals</h1>
+    <div class="new-arrival">
+      <h1>New Arrivals</h1>
     </div>
   );
 };

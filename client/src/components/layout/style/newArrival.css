@@ -1,0 +1,12 @@
+.new-arrival{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-arrival h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #013A34;
+    border-bottom: 1px solid #013A34;
+}

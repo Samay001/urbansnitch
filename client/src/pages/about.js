@@ -1,25 +1,25 @@
 import React from "react";
 import Layout from "./../components/layout/layout.js";
+import aboutImg from "../assets/images/aboutImg.jpg";
+import "./style/about.css";
 
 const About = () => {
   return (
-    <Layout title={"About us - Ecommer app"}>
+    <Layout>
       <div className="row contactus ">
-        <div className="col-md-6 ">
+        <div className="col-md-6 aboutImg">
           <img
-            src="/images/about.jpeg"
+            src={aboutImg}
             alt="contactus"
             style={{ width: "100%" }}
           />
         </div>
-        <div className="col-md-4">
-          <p className="text-justify mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            officiis obcaecati esse tempore unde ratione, eveniet mollitia,
-            perferendis eius temporibus dicta blanditiis doloremque explicabo
-            quasi sunt vero optio cum aperiam vel consectetur! Laborum enim
-            accusantium atque, excepturi sapiente amet! Tenetur ducimus aut
-            commodi illum quidem neque tempora nam.
+        <div className="col-md-4 aboutText">
+          <h1 className="text-center headline">ABOUT US</h1>
+          <p className="text-justify mt-2 text-white ">
+          Welcome to Urban Snitch, where style meets street smarts! We're your go-to destination for trendsetting urban fashion that's as bold and vibrant as the city streets. At Urban Snitch, we believe in clothing that doesn't just make a statement, but starts a conversation.
+
+          Join the Urban Snitch family today and let your style do the talking. Shop now and elevate your wardrobe to new heights!
           </p>
         </div>
       </div>

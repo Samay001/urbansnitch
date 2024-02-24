@@ -1,11 +1,11 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import "./Header.css";
+import { NavLink } from "react-router-dom";
+import "./style/header.css";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import { useCart } from "../../context/cartContext";
-
-const logoImage = "/images/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const { cartItems } = useCart();
@@ -22,11 +22,14 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          <img src={logoImage} alt="Urbansnitch Logo" className="logo-img" />
-        </Link>
+        {/* Brand */}
+        <NavLink to="/" className="navbar-brand">
+          URBAN SNITCH
+        </NavLink>
+
+        {/* Hamburger Button */}
         <button
           className="navbar-toggler"
           type="button"
@@ -36,22 +39,34 @@ function Header() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
+
+        {/* Navbar Items */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <NavLink to="/" className="nav-link" aria-current="page">
-                Home
+          <ul className="navbar-nav mx-auto">
+            {/* Centered Items */}
+            <li className="nav-item item-border">
+              <NavLink to="/women" className="nav-link" aria-current="page">
+                Women
               </NavLink>
             </li>
+            <li className="nav-item item-border">
+              <NavLink to="/men" className="nav-link" aria-current="page">
+                Men
+              </NavLink>
+            </li>
+            <li className="nav-item item-border">
+              <NavLink to="/kids" className="nav-link" aria-current="page">
+                Kids
+              </NavLink>
+            </li>
+          </ul>
+
+          {/* Right Aligned Items for Small Screens */}
+          <ul className="navbar-nav ms-auto d-lg-none">
             {!auth.user ? (
               <>
-                <li className="nav-item">
-                  <NavLink to="/register" className="nav-link">
-                    Register
-                  </NavLink>
-                </li>
                 <li className="nav-item">
                   <NavLink to="/login" className="nav-link">
                     Login
@@ -66,14 +81,50 @@ function Header() {
                     to="/login"
                     className="nav-link"
                   >
-                    Logout
+                    Logout({auth.user.name})
                   </NavLink>
                 </li>
               </>
             )}
+
             <li className="nav-item">
-              <NavLink to="/cart" className="nav-link">
-                Cart({cartItems.length})
+              <NavLink to="/cart" className="nav-link" aria-current="page">
+                <FontAwesomeIcon icon={faShoppingBag} />
+                <span class='badge badge-warning' id='lblCartCount'> {cartItems.length} </span>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+
+        {/* Right Aligned Items for Full Screen */}
+        <div className="d-none d-lg-block">
+          <ul className="navbar-nav ms-auto">
+            {!auth.user ? (
+              <>
+                <li className="nav-item item-border">
+                  <NavLink to="/login" className="nav-link">
+                    Login
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <NavLink
+                    onClick={handleLogout}
+                    to="/login"
+                    className="nav-link"
+                  >
+                    Logout ({auth.user.name})
+                  </NavLink>
+                </li>
+              </>
+            )}
+
+            <li className="nav-item">
+              <NavLink to="/cart" className="nav-link" aria-current="page">
+                <FontAwesomeIcon icon={faShoppingBag} />
+                <span class='badge badge-warning' id='lblCartCount'> {cartItems.length} </span>
               </NavLink>
             </li>
           </ul>

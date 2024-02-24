@@ -1,61 +1,49 @@
 import React from "react";
+import "./style/home.css";
 import Layout from "../components/layout/layout";
-import Banner from "../components/layout/banner";
-import { NavLink } from "react-router-dom";
+import homeImg from "../assets/images/homeee1.jpg";
+import maleImg from "../assets/images/maleeImg.jpg";
+import femaleImg from "../assets/images/femaleeImg.jpg";
+import kidsImg from "../assets/images/kidssImg.jpg";
 
-const discountBanner = "/images/discountBanner.webp";
-const maleBanner = "/images/maleBanner.jpg";
-const femaleBanner = "/images/femaleBanner.avif";
 
 const Home = () => {
-  const buttonStyle = {
-    position: "absolute",
-    bottom: "60px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    backgroundColor: "white",
-    color: "black",
-    fontWeight: 600,
-    zIndex: 1,
-    border: "1px solid black",
-    padding: "10px",
-    cursor: "pointer",
-    borderRadius: "10px",
-  };
-
   return (
     <Layout>
-      {/* Discount Banner */}
-      <Banner
-        imageUrl={discountBanner}
-        altText="Discount Banner"
-        text={"Special Discount"}
-      />
-
-      {/* Male Section Banner */}
-      <div style={{ position: "relative" }}>
-        <Banner
-          imageUrl={maleBanner}
-          altText="Male Section Banner"
-          text="New Arrivals"
-        />
-        <NavLink to="/male">
-          <button style={buttonStyle}>Male</button>
-        </NavLink>
+      <div className="container">
+        <div className="row">
+          <span className="col-md-6 borderr heading">
+            <h1>ELEVATE YOUR </h1>
+            <h1 className="everyday">EVERYDAY </h1>
+            <h1>WARDROBE </h1>
+          </span>
+          <span className="col-md-6 img">
+            <img src={homeImg} alt="home1" className="my-image img-fluid" />
+          </span>
+        </div>
       </div>
 
-      {/* Female Section Banner */}
-      <div style={{ position: "relative" }}>
-        <Banner
-          imageUrl={femaleBanner}
-          altText="Female Section Banner"
-          text="New Arrivals"
-        />
-        <NavLink to="/female">
-          <button style={buttonStyle}>Female</button>
-        </NavLink>
+      <div className="container2">
+        <div className="heading2">
+            <h1>TRENDY COLLECTION</h1>
+        </div>
+        <div className="row wrapper">
+          <div className="col-md-6 femaleImg">
+            {/* <div className="img-overlay">WOMEN'S FASION</div> */}
+            <img src={femaleImg} alt="female" className="img-fluid dull-img" />
+          </div>
+          <div className="col-md-6">
+            <div className="row subWrapper">
+              <div className="col-md-12 maleImg">
+                <img src={maleImg} alt="male" className="img-fluid dull-img" />
+              </div>
+              <div className="col-md-12 kidsImg">
+                <img src={kidsImg} alt="kids" className="img-fluid dull-img" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </Layout>
   );
 };

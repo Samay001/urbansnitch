@@ -1,0 +1,111 @@
+/* -------------------home1-------------------- */
+h1 {
+    color: #FFE9A3;
+    font-family: 'msBold-wide', sans-serif;
+    letter-spacing: 1px;
+    font-size: 5rem; 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 3rem; /* Further adjust font size for even smaller screens */
+    }
+}
+
+.everyday{
+    font-family: 'msRegular-wide', sans-serif;
+}
+
+.borderr{
+    border-right: 2px solid #FFE9A3;
+}
+
+.row{
+    margin-bottom: 0;
+}
+
+.heading{
+    margin-top:50px;
+    padding: 10px;
+}
+
+.img{
+    padding: 50px;
+    overflow-y: hidden;
+}
+
+.my-image {
+    height: 90%;
+    width: 100%;
+    /* max-height: 100vh;  */
+    object-fit: cover; 
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px #373737;
+}
+
+
+/* --------------------home2-------------------- */
+.container2{
+    background-color:#F5F3E7 ;
+    margin-left: 0;
+    margin-right:0;
+}
+
+.heading2{
+    text-align:center;
+    padding: 20px;
+    
+}
+
+.heading2 h1{
+    color: #013A34;
+    margin-top: 50px;
+    border-bottom: 1px solid #013A34;
+}
+
+.wrapper{
+    padding: 100px;
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+}
+
+.femaleImg img{
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.maleImg{
+    margin-bottom: 40px;
+}
+
+.maleImg img{
+    height: 37vh;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: center top; */
+}
+
+.kidsImg img{
+    height: 37vh;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: center bottom; */
+}  
+
+.dull-img{
+    filter: brightness(70%);
+}
+
+
+/* home2.css */
+
+  

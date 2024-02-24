@@ -13,6 +13,8 @@
   "author": "Samay Rathod",
   "license": "MIT",
   "dependencies": {
+    "@stripe/stripe-js": "^2.4.0",
+    "antd": "^5.14.1",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "concurrently": "^8.2.2",
@@ -22,6 +24,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "razorpay": "^2.9.2",
+    "stripe": "^14.16.0"
   }
 }

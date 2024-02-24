@@ -1,0 +1,32 @@
+.contactus {
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    background-color:  #013A34;
+}
+
+.contactImg{
+  padding: 10px;
+  margin: 3%;
+  
+}
+
+.contactImg img{
+  width: 100%;
+  /* padding: 40px; */
+  border-radius: 15px;
+}
+
+.headline{
+  color:FFE9A3;
+}
+
+.content{
+  font-weight: bold;
+  font-size: large;
+}

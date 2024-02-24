@@ -1,0 +1,32 @@
+.aboutImg{
+    margin:3%;
+    padding: 10px;  
+}
+
+.aboutImg img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.aboutText{
+    padding: 10px;
+    color: #013A34;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top:2%;
+}
+
+.headline{
+    color:#FFE9A3;
+    padding: 1%;
+    margin-top: 1%;
+    /* padding-left: 0%;
+    padding-bottom: 0%; */
+}
+
+.aboutText p{
+    padding: 7%;
+    padding-left: 0;
+    font-weight: bold;
+    font-size: large;
+}
