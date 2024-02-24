@@ -12,13 +12,17 @@ function Header() {
   const [auth, setAuth] = useAuth();
 
   const handleLogout = () => {
+    setTimeout(() => {
+      toast.success("Logged out successfully!");
+    }, 3000);
+    
     setAuth({
       ...auth,
       user: null,
       token: "",
     });
     localStorage.removeItem("auth");
-    toast.success("Logout Successfully");
+    
   };
 
   return (

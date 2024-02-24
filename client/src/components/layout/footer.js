@@ -79,7 +79,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faFacebook} />
                 </span>
                 <a
-                  href="https://fontawesome.com/icons/facebook?f=brands&s=solid"
+                  href="https://github.com/Samay001"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -91,7 +91,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faTwitter} />
                 </span>
                 <a
-                  href="https://fontawesome.com/icons/facebook?f=brands&s=solid"
+                  href="https://github.com/Samay001"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -103,7 +103,7 @@ const Footer = () => {
                   <FontAwesomeIcon icon={faInstagram} />
                 </span>
                 <a
-                  href="https://fontawesome.com/icons/facebook?f=brands&s=solid"
+                  href="https://github.com/Samay001"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

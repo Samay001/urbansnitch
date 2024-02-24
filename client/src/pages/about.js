@@ -9,6 +9,7 @@ const About = () => {
       <div className="row contactus ">
         <div className="col-md-6 aboutImg">
           <img
+            loading="lazy"
             src={aboutImg}
             alt="contactus"
             style={{ width: "100%" }}

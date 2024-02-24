@@ -5,24 +5,33 @@ import CartProductBox from "../components/layout/cartProductBox";
 import { useCart } from "../context/cartContext";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
+import toast from "react-hot-toast";
+import { useAuth } from "../context/auth";
+import { NavLink } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, promoCode, clearCart } = useCart();
+  const [auth] = useAuth();
   const [inputPromoCode, setInputPromoCode] = useState("");
   const [price, setPrice] = useState(0);
   const [netPrice, setNetPrice] = useState(0);
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
-      if (inputPromoCode === promoCode) {
+      if (inputPromoCode === promoCode && !(cartItems.length === 0)) {
         e.preventDefault();
         const discountFactor = 0.9;
         const discountedCartPrice = price * discountFactor;
         console.log(discountedCartPrice);
         setNetPrice(discountedCartPrice);
-        alert("Promo Code Applied");
-      } else {
-        alert("Invalid Promo Code");
+        toast.success("Promo Code Applied");
+      } 
+      else if (cartItems.length === 0) {
+        toast.error("Cart is empty");
+        e.preventDefault();
+      }
+      else {
+        toast.error("Invalid Promo Code. Enter SAMAY for 10% discount");
         e.preventDefault();
       }
     }
@@ -67,6 +76,8 @@ const Cart = () => {
   };
 
   const clearFullCart = () => {
+    if(cartItems.length === 0) return toast.error("Cart is already empty");
+    toast.success("Cart Cleared");
     clearCart();
   };
 
@@ -164,13 +175,22 @@ const Cart = () => {
                 <div className="col">TOTAL PRICE</div>
                 <div className="col text-right">Rs {netPrice.toFixed(2)}</div>
               </div>
-              <button
-                className="checkout-btn"
-                type="button"
-                onClick={handleCheckout}
-              >
-                CHECKOUT
-              </button>
+              
+              {auth.user ? (
+                <button
+                  className="checkout-btn"
+                  type="button"
+                  onClick={handleCheckout}
+                >
+                  CHECKOUT
+                </button>
+              ) : (
+                <NavLink to="/login">
+                  <button className="checkout-btn" type="button">
+                    LOGIN
+                  </button>
+                </NavLink>
+              )}
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import "./style/productBox.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../../context/cartContext";
+import toast from "react-hot-toast";
+import { set } from "mongoose";
 
 const ProductBox = ({ product }) => {
   const { addItemToCart } = useCart();
@@ -11,9 +13,10 @@ const ProductBox = ({ product }) => {
 
   const handleAddToCart = () => {
     if (selectedSize === "") {
-      alert("Please select a size");
+      toast.error("Please select a size");
       return;
     }
+    toast.success("Item added to cart");
     addItemToCart({ ...product, size: selectedSize });
   };
 
@@ -23,7 +26,7 @@ const ProductBox = ({ product }) => {
         <div className="pro-box">
           <div className="pro-img">
             <NavLink to={`/product/${product.id}`}>
-              <img src={product.image} alt="product" />
+              <img loading="lazy" src={product.image} alt="product" />
             </NavLink>
           </div>
           <div className="pro-text">
@@ -32,37 +35,42 @@ const ProductBox = ({ product }) => {
             <p>Rs.{product.price}</p>
           </div>
           <div className="add-to-cart">
-            <button
-              className="btn btn-add-to-cart"
-              onClick={handleAddToCart}
-            >
+            <button className="btn btn-add-to-cart" onClick={handleAddToCart}>
               <FontAwesomeIcon className="i" icon={faShoppingCart} size="lg" />
             </button>
           </div>
           <div className="size-btn">
             <button
-              className={`btn btn-outline-secondary size ${selectedSize === "S" ? "selected" : ""}`}
+              className={`btn btn-outline-secondary size ${
+                selectedSize === "S" ? "selected" : ""
+              }`}
               onClick={() => setSelectedSize("S")}
             >
               S
             </button>
 
             <button
-              className={`btn btn-outline-secondary size ${selectedSize === "M" ? "selected" : ""}`}
+              className={`btn btn-outline-secondary size ${
+                selectedSize === "M" ? "selected" : ""
+              }`}
               onClick={() => setSelectedSize("M")}
             >
               M
             </button>
 
             <button
-              className={`btn btn-outline-secondary size ${selectedSize === "L" ? "selected" : ""}`}
+              className={`btn btn-outline-secondary size ${
+                selectedSize === "L" ? "selected" : ""
+              }`}
               onClick={() => setSelectedSize("L")}
             >
               L
             </button>
 
             <button
-              className={`btn btn-outline-secondary size ${selectedSize === "XL" ? "selected" : ""}`}
+              className={`btn btn-outline-secondary size ${
+                selectedSize === "XL" ? "selected" : ""
+              }`}
               onClick={() => setSelectedSize("XL")}
             >
               XL

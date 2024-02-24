@@ -18,7 +18,7 @@ const Home = () => {
             <h1>WARDROBE </h1>
           </span>
           <span className="col-md-6 img">
-            <img src={homeImg} alt="home1" className="my-image img-fluid" />
+            <img loading="lazy" src={homeImg} alt="home1" className="my-image img-fluid" />
           </span>
         </div>
       </div>
@@ -30,15 +30,15 @@ const Home = () => {
         <div className="row wrapper">
           <div className="col-md-6 femaleImg">
             {/* <div className="img-overlay">WOMEN'S FASION</div> */}
-            <img src={femaleImg} alt="female" className="img-fluid dull-img" />
+            <img loading="lazy" src={femaleImg} alt="female" className="img-fluid dull-img" />
           </div>
           <div className="col-md-6">
             <div className="row subWrapper">
               <div className="col-md-12 maleImg">
-                <img src={maleImg} alt="male" className="img-fluid dull-img" />
+                <img loading="lazy" src={maleImg} alt="male" className="img-fluid dull-img" />
               </div>
               <div className="col-md-12 kidsImg">
-                <img src={kidsImg} alt="kids" className="img-fluid dull-img" />
+                <img loading="lazy" src={kidsImg} alt="kids" className="img-fluid dull-img" />
               </div>
             </div>
           </div>
