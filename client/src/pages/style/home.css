@@ -1,4 +1,6 @@
-/* -------------------home1-------------------- */
+/* -------------------home.css ------------------- */
+
+/* Styles for the first section */
 h1 {
     color: #FFE9A3;
     font-family: 'msBold-wide', sans-serif;
@@ -6,9 +8,23 @@ h1 {
     font-size: 5rem; 
 }
 
-@media (max-width: 768px) {
+/* Media queries for responsive adjustments */
+@media (max-width: 1024px) {
     h1 {
-        font-size: 4rem; /* Adjust font size for smaller screens */
+        font-size: 3rem; /* Adjust font size for tablets like iPad Mini */
+    }
+    .overlay-text {
+        font-size: 0.5rem; /* Adjust overlay text size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .img {
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+    .overlay-text {
+        font-size: 0.2rem; /* Adjust overlay text size for smaller screens */
+        font-weight: 400; /* Adjust font weight for smaller screens */
     }
 }
 
@@ -17,95 +33,97 @@ h1 {
     h1 {
         font-size: 3rem; /* Further adjust font size for even smaller screens */
     }
+    .borderr{
+        border-right: none;
+    }
+    .overlay-text {
+        font-size: 0.5rem; /* Further adjust overlay text size for even smaller screens */
+    }
 }
 
-.everyday{
+/* Other styles */
+.everyday {
     font-family: 'msRegular-wide', sans-serif;
 }
 
-.borderr{
+.borderr {
     border-right: 2px solid #FFE9A3;
 }
 
-.row{
+.row {
     margin-bottom: 0;
 }
 
-.heading{
-    margin-top:50px;
-    padding: 10px;
+.heading {
+    margin-top: 2rem; /* Adjust margin top for spacing */
+    padding: 1rem; /* Adjust padding for spacing */
 }
 
-.img{
-    padding: 50px;
-    overflow-y: hidden;
+.img {
+    padding: 2rem;
 }
 
 .my-image {
     height: 90%;
     width: 100%;
-    /* max-height: 100vh;  */
-    object-fit: cover; 
     border-radius: 20px;
     box-shadow: 0 0 5px 2px #373737;
 }
 
-
-/* --------------------home2-------------------- */
-.container2{
-    background-color:#F5F3E7 ;
+/* Styles for the second section */
+.container2 {
+    background-color: #F5F3E7;
     margin-left: 0;
-    margin-right:0;
+    margin-right: 0;
+    padding: 1rem; /* Add padding for spacing */
 }
 
-.heading2{
-    text-align:center;
+.heading2 {
+    text-align: center;
     padding: 20px;
-    
 }
 
-.heading2 h1{
+.heading2 h1 {
     color: #013A34;
-    margin-top: 50px;
+    margin-top: 2rem;
     border-bottom: 1px solid #013A34;
 }
 
-.wrapper{
-    padding: 100px;
-    /* margin-top: 50px; */
-    margin-bottom: 50px;
+.wrapper {
+    padding: 2rem; /* Add padding for spacing */
+    margin-bottom: 2rem; /* Add margin bottom for spacing */
 }
 
-.femaleImg img{
-    height: 80vh;
+.femaleImg img,
+.maleImg img,
+.kidsImg img {
+    height: auto; /* Adjust height to auto for responsiveness */
     width: 100%;
     object-fit: cover;
-    object-position: center bottom;
 }
 
-.maleImg{
-    margin-bottom: 40px;
+.maleImg {
+    margin-bottom: 2rem; /* Adjust margin bottom for spacing */
 }
 
-.maleImg img{
-    height: 37vh;
-    width: 100%;
-    object-fit: cover;
-    /* object-position: center top; */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'msRegular-wide', sans-serif;
 }
 
-.kidsImg img{
-    height: 37vh;
-    width: 100%;
-    object-fit: cover;
-    /* object-position: center bottom; */
-}  
-
-.dull-img{
+.dull-img {
     filter: brightness(70%);
 }
 
-
-/* home2.css */
-
-  
+.dull-img:hover {
+    filter: brightness(50%);
+}

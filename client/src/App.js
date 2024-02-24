@@ -10,7 +10,6 @@ import Male from "./pages/Products/male";
 import Female from "./pages/Products/female";
 import Kids from "./pages/Products/kids";
 import Cart from "./pages/cart";
-import Orders from "./pages/orders";
 import Success from "./pages/success";
 import Failed from "./pages/failed";
 import { CartContextProvider } from "./context/cartContext";
@@ -30,7 +29,6 @@ function App() {
         <Route path="/women" element={<Female />} />
         <Route path="/kids" element={<Kids />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/orders" element={<Orders />} />
         <Route path="/success" element={<Success />} />
         <Route path="/failed" element={<Failed />} />
         <Route path="*" element={<PageNotFound />} />

@@ -61,10 +61,10 @@ const Footer = () => {
               <h4>Quick Links</h4>
               <div className="link-container">
                 <NavLink to="/contact">
-                  Contact Us
+                  <a>Contact Us</a>
                 </NavLink>
                 <NavLink to="/about">
-                  About Us
+                <a>About Us</a>
                 </NavLink>
               </div>
             </div>
@@ -115,7 +115,7 @@ const Footer = () => {
         </div>
         <div className="row" style={{ padding: "10px" }}>
           <div className="col-md-12 text-center">
-            <p>&copy; 2023 Urban Snitch</p>
+            <p>&copy; 2024 Urban Snitch</p>
           </div>
         </div>
       </div>

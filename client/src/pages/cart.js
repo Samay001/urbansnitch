@@ -118,8 +118,8 @@ const Cart = () => {
                 </div>
               </div>
               <div className="product-heading">
-                <div className="row">
-                  <div className="col text-white text-center">
+                <div className="row justify-content-between align-items-center">
+                  <div className="col text-white text-center ">
                     <b>Name</b>
                   </div>
                   <div className="col text-white text-center">

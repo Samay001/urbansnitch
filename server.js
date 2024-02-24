@@ -33,7 +33,7 @@ app.use("/api/v1/auth", authRoute);
 // Route for creating orders and initiating checkout session
 app.post("/api/v1/orders", async (req, res) => {
   let products = req.body;
-  products = products.products;0
+  products = products.products;
   console.log(products);
 
   const lineItems = products.map((product) => ({

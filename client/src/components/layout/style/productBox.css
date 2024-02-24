@@ -68,3 +68,34 @@
 .imgProduct{
   border-radius: 10px;
 }
+
+.size-btn {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  margin-top: 20px;
+  gap: 10px; /* Adjust gap between buttons */
+  justify-content: center; /* Center-align buttons */
+  width: 100%; /* Make the container full width */
+}
+
+.size-btn button,
+.add-to-cart button {
+  margin-bottom: 10px; /* Add margin bottom for spacing between lines */
+  background-color: #013A34;
+  color: #FFE9A3;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  flex: 1; /* Ensure equal width for buttons */
+}
+
+.size-btn button:hover,
+.add-to-cart button:hover {
+  background-color: #013A34;
+  color: white;
+}
+
+.size.selected {
+  background-color: #000000; 
+  color: #ffffff;
+}

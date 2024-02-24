@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useCart } from "../../context/cartContext";
+import "./style/cardProductBox.css";
 
 const CartProductBox = ({ product }) => {
   const { removeItemFromCart,updateTotalPrice } = useCart();
@@ -40,7 +41,7 @@ const CartProductBox = ({ product }) => {
             alt={product.name}
           />
         </div>
-        <div className="col">
+        <div className="col name">
           <div className="row text-white">{product.name}</div>
           <div className="row text-white">{product.description}</div>
         </div>
