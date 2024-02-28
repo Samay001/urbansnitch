@@ -51,8 +51,8 @@ app.post("/api/v1/orders", async (req, res) => {
     payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/falied",
+    success_url: "https://urbansnitch-w7we.vercel.app/success",
+    cancel_url: "https://urbansnitch-w7we.vercel.app/falied",
   });
 
   res.json({ id: session.id });
