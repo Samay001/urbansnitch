@@ -5,7 +5,7 @@ import CartProductBox from "../components/layout/cartProductBox";
 import { useCart } from "../context/cartContext";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useAuth } from "../context/auth";
 import { NavLink } from "react-router-dom";
 
@@ -68,10 +68,11 @@ const Cart = () => {
       });
 
       if (error) {
-        console.error(error.message);
+        toast.error(error.message);
       }
     } catch (error) {
-      console.error("Error during checkout:", error);
+      // console.error("Error during checkout:", error);
+      toast.error("Error during checkout");
     }
   };
 
@@ -83,8 +84,7 @@ const Cart = () => {
 
   const handleTotalPrice = () => {
     let ans = 0;
-    cartItems.map((product) => (ans += product.price * product.quantity));
-    console.log(ans);
+    cartItems.map((product) => (ans += product.totalPrice));
     setPrice(ans);
   };
 

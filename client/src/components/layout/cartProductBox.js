@@ -7,18 +7,18 @@ const CartProductBox = ({ product }) => {
   const [quantity, setQuantity] = useState(product.quantity);
 
   const increment = () => {
-    if (quantity >= 1) {
-      setQuantity((prevQuantity) => prevQuantity + 1);
-      updateTotalPrice(product.id, product.price);
-    }
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    updateTotalPrice(product.id, newQuantity);
   };
-
+  
   const decrement = () => {
     if (quantity > 1) {
-      setQuantity((prevQuantity) => prevQuantity - 1);
-      updateTotalPrice(product.id, -product.price);
-    }
-  };
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+      updateTotalPrice(product.id, newQuantity);
+  }
+};
 
   const handleClearProduct = () => {
     removeItemFromCart(product.id);
@@ -66,7 +66,7 @@ const CartProductBox = ({ product }) => {
           </button>
         </div>
         <div className="col text-center">
-          <span className="text-white">Rs {product.price}</span>{" "}
+        <span className="text-white">Rs {product.totalPrice.toFixed(2)}</span>{" "}
           <button
             className="close custom-btn "
             type="button"
