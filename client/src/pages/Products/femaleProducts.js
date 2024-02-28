@@ -13,18 +13,18 @@ import image12 from "../../assets/productImages/femaleProducts/fP12.webp";
 
 const femaleProducts =
     [
-        { id: 1, name: "Product 1", description: "Description 1", price: 20.99, image: image1 , quantity: 1 ,totalPrice: 20.99},
-        { id: 2, name: "Product 2", description: "Description 2", price: 25.99, image: image2 , quantity: 1, totalPrice: 25.99},
-        { id: 3, name: "Product 3", description: "Description 3", price: 30.99, image: image3 , quantity: 1 ,totalPrice: 30.99},
-        { id: 4, name: "Product 4", description: "Description 4", price: 35.99, image: image4 , quantity: 1, totalPrice: 35.99},
-        { id: 5, name: "Product 5", description: "Description 5", price: 20.99, image: image5 , quantity: 1 ,totalPrice: 20.99},
-        { id: 6, name: "Product 6", description: "Description 6", price: 25.99, image: image6 , quantity: 1 , totalPrice: 25.99},
-        { id: 7, name: "Product 7", description: "Description 7", price: 30.99, image: image7 , quantity: 1, totalPrice: 30.99},
-        { id: 8, name: "Product 8", description: "Description 8", price: 35.99, image: image8 , quantity: 1, totalPrice: 35.99},
-        { id: 9, name: "Product 9", description: "Description 9", price: 20.99, image: image9 , quantity: 1, totalPrice: 20.99},
-        { id: 10, name: "Product 10", description: "Description 10", price: 25.99, image: image10 , quantity: 1 ,totalPrice: 25.99},
-        { id: 11, name: "Product 11", description: "Description 11", price: 30.99, image: image11 , quantity: 1, totalPrice: 30.99},
-        { id: 12, name: "Product 12", description: "Description 12", price: 35.99, image: image12 , quantity: 1, totalPrice: 35.99},
+        { id: 1, name: "Mesh thong body", description: "Top", price: 2699.00, image: image1 , quantity: 1 ,totalPrice: 2699.00},
+        { id: 2, name: "Cropped ribbed ", description: "T-shirt", price: 799.00, image: image2 , quantity: 1, totalPrice: 2699.00},
+        { id: 3, name: "Ribbed vest ", description: "Top", price: 499.00, image: image3 , quantity: 1 ,totalPrice: 499.00},
+        { id: 4, name: "Ribbed modal-blend", description: "Top", price: 799.00, image: image4 , quantity: 1, totalPrice: 799.00},
+        { id: 5, name: "Denim bandeau", description: "Jacket", price: 2000.99, image: image5 , quantity: 1 ,totalPrice: 2000.99},
+        { id: 6, name: "Mesh bustier", description: "Top ", price: 1505.99, image: image6 , quantity: 1 , totalPrice: 1505.99},
+        { id: 7, name: "Linen shirt", description: "Shirt", price: 1999.00, image: image7 , quantity: 1, totalPrice: 1999.00},
+        { id: 8, name: "Fitted poplin", description: "Shirt", price: 1299.99, image: image8 , quantity: 1, totalPrice: 1299.99},
+        { id: 9, name: "Slit-hem mini ", description: "skirt", price: 2000.99, image: image9 , quantity: 1, totalPrice: 2000.99},
+        { id: 10, name: "Wide twill ", description: "trousers ", price: 1499.99, image: image10 , quantity: 1 ,totalPrice: 1499.99},
+        { id: 11, name: "Flared long ", description: "skirt", price: 2600.99, image: image11 , quantity: 1, totalPrice: 2600.99},
+        { id: 12, name: "High-waisted", description: "Joggers", price: 1299.99, image: image12 , quantity: 1, totalPrice: 1299.99},
       ];
 
 
