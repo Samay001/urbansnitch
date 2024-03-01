@@ -17,7 +17,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      toast.promise("Click again or wait...");
+      toast.loading("Click again or wait...");
       
       const res = await axios.post("https://urbansnitch.onrender.com/api/v1/auth/register", {
         name,
