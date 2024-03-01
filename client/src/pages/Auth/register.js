@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/layout/layout";
 import "./style/login.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
+import { toast } from "react-hot-toast"; // corrected import
 import axios from "axios";
 import loginImg from "../../assets/images/registerImg.jpg";
 
