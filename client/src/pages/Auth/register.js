@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/layout/layout";
 import "./style/login.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast"; // corrected import
+import toast from "react-hot-toast";
 import axios from "axios";
 import loginImg from "../../assets/images/registerImg.jpg";
 
@@ -17,8 +17,8 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      toast.info("Click Again and please wait...");
-
+      toast.promise("Click again or wait...");
+      
       const res = await axios.post("https://urbansnitch.onrender.com/api/v1/auth/register", {
         name,
         email,
@@ -119,3 +119,4 @@ const Register = () => {
 };
 
 export default Register;
+
