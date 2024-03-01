@@ -17,6 +17,8 @@ const Register = () => {
     e.preventDefault();
 
     try {
+      toast.info("Click Again and please wait...");
+
       const res = await axios.post("https://urbansnitch.onrender.com/api/v1/auth/register", {
         name,
         email,
