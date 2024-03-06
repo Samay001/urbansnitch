@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header />
-      <main style={{ minHeight: "80vh" ,overflowY: "hidden",overflowX: "hidden"}}>
+      <main style={{ minHeight: "80vh" ,overflowY: "hidden",overflowX: "hidden",backgroundColor:"#013a34"}}>
         {children}
       </main>
       <Footer />
