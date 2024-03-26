@@ -62,6 +62,7 @@ export const CartContextProvider = ({ children }) => {
         clearCart,
         promoCode,
         updateTotalPrice,
+        setCartItems
       }}
     >
       {children}
