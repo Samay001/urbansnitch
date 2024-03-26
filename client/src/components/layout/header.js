@@ -8,14 +8,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  const { cartItems } = useCart();
+  const { cartItems,setCartItems } = useCart();
   const [auth, setAuth] = useAuth();
 
   const handleLogout = () => {
     setTimeout(() => {
       toast.success("Logged out successfully!");
     }, 3000);
+    
     localStorage.removeItem("cartItems");
+    setCartItems([]);
+    
     setAuth({
       ...auth,
       user: null,
