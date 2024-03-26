@@ -15,7 +15,7 @@ function Header() {
     setTimeout(() => {
       toast.success("Logged out successfully!");
     }, 3000);
-    
+    localStorage.removeItem("cartItems");
     setAuth({
       ...auth,
       user: null,
