@@ -33,11 +33,6 @@ const ProductBox = ({ product }) => {
             <p>{product.description}</p>
             <p>Rs.{product.price}</p>
           </div>
-          <div className="add-to-cart">
-            <button className="btn btn-add-to-cart" onClick={handleAddToCart}>
-              <FontAwesomeIcon className="i" icon={faShoppingCart} size="lg" />
-            </button>
-          </div>
           <div className="size-btn">
             <button
               className={`btn btn-outline-secondary size ${
@@ -73,6 +68,11 @@ const ProductBox = ({ product }) => {
               onClick={() => setSelectedSize("XL")}
             >
               XL
+            </button>
+          </div>
+          <div className="add-to-cart">
+            <button className="btn btn-add-to-cart" onClick={handleAddToCart}>
+              <FontAwesomeIcon className="i" icon={faShoppingCart} size="lg" />
             </button>
           </div>
         </div>
