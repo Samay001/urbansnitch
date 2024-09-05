@@ -176,21 +176,13 @@ const Cart = () => {
                 <div className="col text-right">Rs {netPrice.toFixed(2)}</div>
               </div>
               
-              {auth.user ? (
-                <button
+              <button
                   className="checkout-btn"
                   type="button"
                   onClick={handleCheckout}
                 >
                   CHECKOUT
-                </button>
-              ) : (
-                <NavLink to="/login">
-                  <button className="checkout-btn" type="button">
-                    LOGIN
-                  </button>
-                </NavLink>
-              )}
+              </button>
             </div>
           </div>
         </div>
