@@ -18,7 +18,8 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    toast.success("Please wait...");
+    
     try {
       const res = await axios.post("https://urbansnitch.onrender.com/api/v1/auth/login", {
         email,
