@@ -155,7 +155,7 @@ const Cart = () => {
                 <div className="col" style={{ paddingLeft: 0 }}>
                   TOTAL: {cartItems.length}
                 </div>
-                <div className="col text-right">Rs {price.toFixed(2)}</div>
+                <div className="col text-right">Rs {Math.round(price)}</div>
               </div>
               <form>
                 <p>COUPON CODE</p>
@@ -175,7 +175,7 @@ const Cart = () => {
                 }}
               >
                 <div className="col">TOTAL PRICE</div>
-                <div className="col text-right">Rs {netPrice.toFixed(2)}</div>
+                <div className="col text-right">Rs {Math.round(netPrice) }</div>
               </div>
               
               <button
