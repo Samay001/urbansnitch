@@ -43,19 +43,18 @@ const Cart = () => {
 
   const handleCheckout = async () => {
     try {
+      toast.loading("Please wait while it's loading...");
 
-      toast.loading("please wait while its loading or click again");
-      const stripe = await loadStripe(
-        "pk_test_51OiEITSB0hgPpt6fqZzkYl8a6REnI80ZZ5jXVxd44JHCjhZNvsLtwvyMweJU14uPuT5DYQEbBf003P1BI3tAawe100bg42uDYS"
-      );
+      const stripe = await loadStripe("pk_test_51OiEITSB0hgPpt6fqZzkYl8a6REnI80ZZ5jXVxd44JHCjhZNvsLtwvyMweJU14uPuT5DYQEbBf003P1BI3tAawe100bg42uDYS");
 
       const body = {
-        products: cartItems,
+        products: cartItems.map(item => ({
+          ...item,
+          price: Math.round(item.price) // Ensure price is an integer
+        })),
       };
 
-      const headers = {
-        "Content-Type": "application/json",
-      };
+      const headers = { "Content-Type": "application/json" };
 
       const response = await axios.post(
         "https://urbansnitch.onrender.com/api/v1/orders",
@@ -63,7 +62,7 @@ const Cart = () => {
         { headers }
       );
 
-      const session = await response.data;
+      const session = response.data;  
 
       const { error } = await stripe.redirectToCheckout({
         sessionId: session.id,
@@ -73,10 +72,10 @@ const Cart = () => {
         toast.error(error.message);
       }
     } catch (error) {
-      // console.error("Error during checkout:", error);
       toast.error("Error during checkout");
     }
-  };
+};
+
 
   const clearFullCart = () => {
     if(cartItems.length === 0) return toast.error("Cart is already empty");
