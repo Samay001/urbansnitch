@@ -44,7 +44,7 @@ const Cart = () => {
   const handleCheckout = async () => {
     try {
 
-      toast.loading("please wait while its loading to click again");
+      toast.loading("please wait while its loading or click again");
       const stripe = await loadStripe(
         "pk_test_51OiEITSB0hgPpt6fqZzkYl8a6REnI80ZZ5jXVxd44JHCjhZNvsLtwvyMweJU14uPuT5DYQEbBf003P1BI3tAawe100bg42uDYS"
       );
